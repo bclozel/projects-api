@@ -1,6 +1,7 @@
 type Query {
     greeting(name: String! = "Spring"): String!
     artifactRepositories : [ArtifactRepository]
+    project(slug: ID!): Project
 }
 
 type ArtifactRepository {
@@ -8,4 +9,19 @@ type ArtifactRepository {
     name: String!
     url: String!
     snapshotsEnabled: Boolean
+}
+
+type Project {
+    slug: ID!
+    name: String!
+    repositoryUrl: String!
+    status: ProjectStatus!
+}
+
+enum ProjectStatus {
+    ACTIVE
+    COMMUNITY
+    INCUBATING
+    ATTIC
+    EOL
 }
