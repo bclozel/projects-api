@@ -18,12 +18,14 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.experimental:graphql-spring-boot-starter:1.0.0-SNAPSHOT'
 	implementation 'com.querydsl:querydsl-core'
 	implementation 'com.querydsl:querydsl-jpa'
 	compileOnly 'com.google.code.findbugs:jsr305:3.0.2'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.graphql:spring-graphql-test:1.0.0-SNAPSHOT'
 	testImplementation 'io.projectreactor:reactor-test'
 
 	annotationProcessor 'com.querydsl:querydsl-apt:5.0.0:jpa',
