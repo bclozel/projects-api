@@ -16,6 +16,7 @@ type Project {
     name: String!
     repositoryUrl: String!
     status: ProjectStatus!
+    releases: [Release!]
 }
 
 enum ProjectStatus {
@@ -24,4 +25,18 @@ enum ProjectStatus {
     INCUBATING
     ATTIC
     EOL
+}
+
+type Release {
+    version: String!
+    status: ReleaseStatus!
+    referenceDocUrl: String!
+    apiDocUrl: String!
+    current: Boolean
+}
+
+enum ReleaseStatus {
+    GENERAL_AVAILABILITY
+    MILESTONE
+    SNAPSHOT
 }
