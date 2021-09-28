@@ -1,3 +1,11 @@
 type Query {
     greeting(name: String! = "Spring"): String!
+    artifactRepositories : [ArtifactRepository]
+}
+
+type ArtifactRepository {
+    id: ID!
+    name: String!
+    url: String!
+    snapshotsEnabled: Boolean
 }
