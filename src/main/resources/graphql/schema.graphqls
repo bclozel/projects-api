@@ -21,6 +21,7 @@ type Project {
     repositoryUrl: String!
     status: ProjectStatus!
     releases: [Release!]
+    contributors: [Contributor!]
 }
 
 enum ProjectStatus {
@@ -44,4 +45,19 @@ enum ReleaseStatus {
     GENERAL_AVAILABILITY
     MILESTONE
     SNAPSHOT
+}
+
+type Contributor {
+    gitHubId: String
+    contributionsCount: Int
+    profile: Profile!
+}
+
+type Profile {
+    gitHubId: String!
+    name: String
+    company: String
+    location: String
+    twitter: String
+    profileUrl: String
 }
