@@ -4,6 +4,10 @@ type Query {
     project(slug: ID!): Project
 }
 
+type Mutation {
+    createRelease(projectSlug: String!, version: String!) : Release
+}
+
 type ArtifactRepository {
     id: ID!
     name: String!
