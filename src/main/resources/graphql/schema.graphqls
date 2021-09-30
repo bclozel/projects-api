@@ -37,6 +37,7 @@ type Release {
     referenceDocUrl: String!
     apiDocUrl: String!
     current: Boolean
+    repository: ArtifactRepository!
 }
 
 enum ReleaseStatus {
